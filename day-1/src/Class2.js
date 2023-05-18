@@ -5,6 +5,7 @@ export default function Class2() {
         <div className="App">
         {/* class-2 studying rendenring  */}
 
+        <h1>CLASS2</h1>
 
         {Name1}
 
