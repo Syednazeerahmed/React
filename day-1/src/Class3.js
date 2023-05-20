@@ -6,12 +6,21 @@ export default function Class3() {
                     {Name: "mifzal", age: 19},
                     {Name: "majeed", age: 22}
                 ];
-
+    const planets = [ 
+        {name: "Mars", isGasPlanet: false},
+        {name: "Earth", isGasPlanet: false},
+        {name: "Jupiter", isGasPlanet: true},
+        {name: "Venus", isGasPlanet: false},
+        {name: "Neptune", isGasPlanet: true},
+        {name: "Uranus", isGasPlanet: true}
+    ]
     // demostration of ternary operator, conditional rendering , logical operator and short circuit operator
     return (
       // inline styling in react js
 
-      <div className="App" style = {{backgroundColor: isSafe && 'green'}} >
+      <div className="App" style={{ backgroundColor: isSafe && "green" }}>
+        <h1>CLASS 3</h1>
+        
         {/* short cicuit operator*/}
         {age >= 18 && (
           <h1 style={{ color: "turquoise", backgroundColor: "beige" }}>
@@ -27,6 +36,16 @@ export default function Class3() {
         {users.map((user) => {
           return <Users Name={user.Name} age={user.age} />;
         })}
+
+        {/* class-3 exercise */}
+
+        {planets.map((planet) => {
+          //below is the example of rendering Gas planets only
+          return planet.isGasPlanet ? <h2>{planet.name}</h2> : null;
+
+          //below is the example of rendering Non-Gas planets only using short circuit operator
+          // return !planet.isGasPlanet && <h2>{planet.name}</h2>;
+        })}
       </div>
     );
 }
@@ -34,8 +53,9 @@ export default function Class3() {
 function Users(props) {
     return (
         <div>
-            <p>{props.Name} &nbsp; {props.age}</p>
+            <h2>{props.Name} &nbsp; {props.age}</h2>
         </div>
     );   
 }
+
 
