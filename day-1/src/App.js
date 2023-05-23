@@ -8,19 +8,18 @@ import Class5 from "./Class5";
 function App() {
   return (
     <div className="App">
-      
-      <Class5  />
-      
-      {/* <Class4 className="App" /> */}
+      {/* <class6 className="App" /> */}
 
-      {/* <Class3 className="App" /> */}
+      <Class5 className="App" />
 
-      {/* <Class2 className="App" /> */}
+      <Class4 className="App" />
+
+      <Class3 className="App" />
+
+      <Class2 className="App" />
     </div>
   );
 }
-
-
 
 // class-3 study start
 export default App;
